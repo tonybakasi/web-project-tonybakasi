@@ -1,30 +1,99 @@
-/*
-Replace this example stylesheet with your own.
-Please try to keep the code formatting nice.
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@700&family=Roboto:wght@700&display=swap');
 
-We want to see a sensible mobile-first, responsive design.
-This means the default styles are for the smallest mobile size.
-*/
+/* root styling */
 
-/* Multi-line rulesets must use whitespace for indentation consistently. */
-body {
-	/* note the indentation here */
-	background-color: #5bf;
-	color: #024;
+:root{
+
+	--light: #f8f9fa;
+	--dark: #383a40;
+	--secondary: #DFDABE;
+	--primary-color: #ECEBE4;
+	--secondary-color: #CFC58F;
+	--border: #CBBE75;
+
 }
 
-/* One-liners are fine for very simple rulesets. */
-h1 { font-family: sans-serif;}
-
-/* 
-You will probably need at least two media queries to handle larger screens.
-Your queries should be configured to work with your content
-*/
-@media screen and (min-width: 457px) {
-	/* Code inside media queries should be indented one step further. */
-	body { font-size: 1.2em }
+body{
+	font-family: 'Roboto', sans-serif; 
+	padding: 0;
+	margin: 0;
 }
-/*
-We don't want to see a min-width of 457px in your code
-This was chosen to match the template content.
-*/
+
+
+a{
+	text-decoration: none;
+
+}
+
+*>*{
+	box-sizing: border-box;
+}
+
+/*global styling*/
+.text-light{
+ color: var(--light);
+}
+
+.text-dark{
+	color: var(--dark);
+}
+
+.text-secondary{
+	color: var(--secondary);
+}
+
+.text-primary{
+	color: var(--primary-color);
+}
+
+.bg-light{
+	background-color: var(--light);
+}
+
+.container{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: auto;
+}
+
+/*section styling*/
+
+/* -----Navigation Menu Styling ----- */
+.navbar{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.nav-brand{
+	font-family: 'DM Sans', sans-serif;
+	font-weight: bold;
+	align-self: center;
+	font-size: 38px;
+}
+
+.collapse{
+	align-self: center;
+}
+
+.nav-link{
+	font-size: 20px;
+	margin: 14px;
+	color: var(--dark);
+	font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:hover{
+	color: var(--primary-color);
+}
+
+.search-box{
+	display: inline;
+	border-right: 1px solid var(--secondary);
+	padding-right: 12px;
+	margin-right: 10px;
+}
+
+/* -----Navigation Menu Styling ----- */
