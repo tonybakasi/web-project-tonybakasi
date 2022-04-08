@@ -56,6 +56,10 @@ a{
 	margin: auto;
 }
 
+.img-fluid{
+	width: 100;
+}
+
 /*section styling*/
 
 /* -----Navigation Menu Styling ----- */
@@ -110,7 +114,27 @@ a{
 	outline: none;
 }
 
-/* -----Navigation Menu Styling ----- */
+/* -----.Navigation Menu Styling ----- */
+
+/*-----Main Section ----------*/
+
+#site-main{
+	margin-top: 8em;
+}
+
+#posts{
+	margin-bottom: 5em;
+}
+
+.grid{
+	margin: 0 auto;
+}
+
+.grid .grid-item{
+	width: calc(40%); 
+}
+
+/*-----.Main Section ----------*/
 
 /* Media Query */
 
