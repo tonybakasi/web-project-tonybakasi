@@ -130,7 +130,8 @@ a{
 	.collapse{
 		max-height: 0;
 		overflow: hidden;
-		
+		transition: all 0.8s ease-in; 
+
 	}
 
 	.collapse .nav-link{
@@ -141,4 +142,9 @@ a{
 	.search-box{
 		border-right: none;
 	}
+
+	.collapse-toggle{
+		max-height: 500px;
+	}
+
 }
