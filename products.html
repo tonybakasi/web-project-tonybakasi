@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spirit Lead Me Website</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="modal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+	
+	<style>
+	:root{
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: #40c9a2;
+    --grey: #ededed;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/*...*/
+
+img{
+	width: 100%;
+	display: block;
+}
+.container{
+	width: 88vw;
+	margin: 0 auto;
+}
+.lg-title,
+.md-title,
+.sm-title{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 0.6rem 0;
+	text-transform: capitalize;
+}
+.lg-title{
+	font-size: 2.5rem;
+	font-weight: 500;
+	text-align: center;
+	padding: 1.3rem 0;
+	opacity: 0.9;
+}
+.md-title{
+	font-size: 2rem;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sm-title{
+	font-weight: 300;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+.text-light{
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.5;
+	opacity: 0.5;
+	margin: 0.4rem 0;
+}
+
+/*Product Section*/
+.products{
+	background: #FFFDD0;
+	padding: 3.2rem 0;
+}
+.products .text-light{
+	text-align: center;
+	width: 70%;
+	margin: 0.9rem auto;
+}
+.product{
+	margin: 2rem;
+	position: relative;
+}
+.product-content{
+	background: #a09e7e;
+	padding: 3rem 0.5rem 2rem 0.5rem;
+	cursor: pointer;
+}
+.product-img{
+	background: #989670;
+	box-shadow: 0 0 20px 10px #9f9e83;
+	margin: 0 auto;
+	border-radius: 50%;
+	transition: background 0.5s ease;	
+}
+.product-btns{
+	display: flex;
+	justify-content: center;
+	margin-top: 1.4rem;
+	opacity: 0;
+	transition: opacity 0.6s ease;
+}
+.btn-cart, .btn-buy{
+	background: transparent;
+	border: 1px solid black;
+	padding: 0.8rem 0;
+	width: 125px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: none;
+	transition: all 0.6s ease;
+}
+.btn-cart{
+	background: #5b5945;
+	color: #f8f9fa;
+}
+.btn-cart:hover{
+	background: #40c9a2;
+}
+.btn-buy{
+	background: #928b3d;
+	color: #f8f9fa;
+}
+.btn-buy:hover{
+	background: #40c9a2;
+}
+.product-info{
+	background: #b1ab68;
+	padding: 2rem;
+}
+.product-info-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.rating span {
+	color: #b1ab68;
+}
+.product-name{
+	color: black;
+	display: block;
+	text-decoration: none;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.product-price{
+	padding-top: 0.6rem;
+	padding-right: 0.6rem;
+	display: inline-block;
+}
+.product-price:first-of-type{
+	text-decoration: line-through;
+	color: #ffffff;
+}
+.product-img img{
+	transition: transform 0.6s ease;
+}
+.product:hover .product-img img{
+	transform: scale(1.1);
+}
+.product:hover .product-img{
+	background: #b1ab68;
+}
+.product:hover .product-btns{
+	opacity: 1;
+}
+.off-info .sm-title{
+	background: #b1ab68;
+	color: white;
+	display: inline-block;
+	padding: 0.5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	z-index: 1;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+/*Media Queries*/
+@media screen and (min-width: 992px){
+	.product-items{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+	</style>
+</head>
+<body>
+
+	<!--Navbar Section-->
+	<nav class="navbar">
+		<div class="navbar__container">
+			<a href="/" id="navbar__logo"><i class="fa-solid fa-cross"></i> Spirit Lead Me</a>
+			<div class="navbar__toggle" id="mobile-menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+			<ul class="navbar__menu">
+				<li class="navbar__item">
+					<a href="/" class="navbar__links"> Home </a>
+				</li>
+				<li class="navbar__item">
+					<a href="/scripture.html" class="navbar__links"> Scripture </a>
+					</li>
+					<li class="navbar__item">
+						<a href="/products.html" class="navbar__links"> Products </a>
+					</li>
+					<li class="navbar__btn">
+						<a href="/signup.html" class="button"> Sign Up </a>
+					</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class = "products">
+		<div class = "container">
+			<h1 class = "lg-title"> Essentials and Clothing </h1>
+			<p class = "text-light"> Shop our custom range of products! From study material to our niche clothing. 
+				All proceeds go to supporting the church and partnering groups in the community to provide for those who need it.
+				"Generous persons will prosper; those who refresh others will themselves be refreshed" - Proverbs 11:25
+			</p>
+
+				<div class = "product-items">
+					<!-- bible product-->
+					<div class = "product">
+						<div class= "product-content" >
+							<div class="product-img">
+								<img src = "images/pic9.jpg" alt=" product image" height="400" width="400">
+							</div>
+							<div class = "product-btns">
+								<button type = "button" class = "btn-cart">
+									Add to Cart
+									<span><i class = "fas fa-plus"></i></span>
+								</button>
+								<button type = "button" class = "btn-buy">
+									Buy Now
+									<span><i class = "fas fa-shopping-cart"></i></span>
+								</button>
+							</div>
+						</div>
+
+						<div class = "product-info">
+							<div class = "product-info-top">
+								<h2 class = "sm-title">Essentials</h2>
+								<div class = "rating">
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+								</div>
+							</div>
+							<a href ="#" class = "product-name">Holy Bible Standard Edition</a>
+							<p class = "product-price">£ 9.99</p>
+							<p class = "product-price">£ 7.99</p>
+						</div>
+
+						<div class = "off-info">
+							<h2 class = "sm-title">25% off</h2>
+						</div>
+					</div>
+					<!-- bible product-->
+					<!-- prayer book product-->
+					<div class = "product">
+						<div class= "product-content" >
+							<div class="product-img">
+								<img src = "images/pic10.jpg" alt=" product image" height="400" width="400">
+							</div>
+							<div class = "product-btns">
+								<button type = "button" class = "btn-cart">
+									Add to Cart
+									<span><i class = "fas fa-plus"></i></span>
+								</button>
+								<button type = "button" class = "btn-buy">
+									Buy Now
+									<span><i class = "fas fa-shopping-cart"></i></span>
+								</button>
+							</div>
+						</div>
+
+						<div class = "product-info">
+							<div class = "product-info-top">
+								<h2 class = "sm-title">Essentials</h2>
+								<div class = "rating">
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+									<span><i class = " fas fa-star"></i></span>
+								</div>
+							</div>
+							<a href ="#" class = "product-name">Daily Prayer Book</a>
+							<p class = "product-price">£ 7.99</p>
+							<p class = "product-price">£ 5.99</p>
+						</div>
+						<div class = "off-info">
+							<h2 class = "sm-title">20% off</h2>
+						</div>
+					</div>
+					<!-- prayer book product-->
+						<!-- notebook product-->
+						<div class = "product">
+							<div class= "product-content" >
+								<div class="product-img">
+									<img src = "images/pic11.jpg" alt=" product image" height="400" width="400">
+								</div>
+								<div class = "product-btns">
+									<button type = "button" class = "btn-cart">
+										Add to Cart
+										<span><i class = "fas fa-plus"></i></span>
+									</button>
+									<button type = "button" class = "btn-buy">
+										Buy Now
+										<span><i class = "fas fa-shopping-cart"></i></span>
+									</button>
+								</div>
+							</div>
+	
+							<div class = "product-info">
+								<div class = "product-info-top">
+									<h2 class = "sm-title">Essentials</h2>
+									<div class = "rating">
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+									</div>
+								</div>
+								<a href ="#" class = "product-name">Personal Notebook</a>
+								<p class = "product-price">£ 7.99</p>
+								<p class = "product-price">£ 5.99</p>
+							</div>
+	
+							<div class = "off-info">
+								<h2 class = "sm-title">20% off</h2>
+							</div>
+						</div>
+						<!-- notebook product-->
+						<!-- shirt product-->
+						<div class = "product">
+							<div class= "product-content" >
+								<div class="product-img">
+									<img src = "images/pic12.jpg" alt=" product image" height="400" width="400">
+								</div>
+								<div class = "product-btns">
+									<button type = "button" class = "btn-cart">
+										Add to Cart
+										<span><i class = "fas fa-plus"></i></span>
+									</button>
+									<button type = "button" class = "btn-buy">
+										Buy Now
+										<span><i class = "fas fa-shopping-cart"></i></span>
+									</button>
+								</div>
+							</div>
+	
+							<div class = "product-info">
+								<div class = "product-info-top">
+									<h2 class = "sm-title">Clothing</h2>
+									<div class = "rating">
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+										<span><i class = " fas fa-star"></i></span>
+									</div>
+								</div>
+								<a href ="#" class = "product-name">Spirit Lead Me T Shirt</a>
+								<p class = "product-price">£ 29.99</p>
+								<p class = "product-price">£ 24.99</p>
+							</div>
+	
+							<div class = "off-info">
+								<h2 class = "sm-title">17% off</h2>
+							</div>
+						</div>
+						<!-- shirt product-->
+				</div>
+		</div>
+	</div>
+
+    <!--Footer Section-->
+<div class="footer__container">
+	<div class="footer__links">
+		<div class="footer__link--wrapper">
+			<div class="footer__link--items">
+				<h2>About Us</h2>
+				<a href="/">What is Christianity?</a>
+				<a href="/">Testimonials</a>
+				<a href="/">Find A Church</a>
+				<a href="/">Privacy Policy</a>
+			</div>
+			<div class="footer__link--items">
+				<h2>Contact Us</h2>
+				<a href="/">UK Telephone No.</a>
+				<a href="/">International Telephone No.</a>
+				<a href="/">Email</a>
+				<a href="/">P.O Box</a>
+			</div>
+		</div>
+		<div class="footer__link--wrapper">
+			<div class="footer__link--items">
+				<h2>Media</h2>
+				<a href="/">Live Sermons</a>
+				<a href="/">Photo Gallery</a>
+				<a href="/">Youtube Playlists</a>
+				<a href="/">Short Films</a>
+			</div>
+			<div class="footer__link--items">
+				<h2>Social Media</h2>
+				<a href="/">Facebook</a>
+				<a href="/">Instagram</a>
+				<a href="/">Twitter</a>
+				<a href="/">TikTok</a>
+			</div>
+		</div>
+	</div>
+	<div class="social__media">
+		<div class="social__media--wrap">
+			<div class="footer__logo">
+				<a href="/" id="footer__logo"><i class="fa-solid fa-cross"></i>Spirit Lead Me</a>
+			</div>
+			<p class="website__rights">© Spirit Lead Me 2022. All Rights Reserved</p>
+			<div class="social__icons">
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-facebook"></i>
+				</a>
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-tiktok"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
