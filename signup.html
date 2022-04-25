@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Spirit Lead Me Website</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="modal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<style>
+		html{
+			background-color: #FFFDD0;
+			color: black;
+		}
+		body{
+			padding-top: 20vh;
+		}
+
+		.signup__container{
+			background: #cdc88d;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: auto;
+			height: 460px;
+			width: 350px;
+			box-shadow: -3px -2px 6px #797659, 7px 9px 25px #3a392d;
+		}
+		form{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+		}
+		input{
+			height: 30px;
+			border: 2px solid #3a392d;
+			border-radius: 5px;
+			background: #dbd7aa;
+			color: black;
+			text-align: center;
+			outline: none;
+			font-size: 15px;
+		}
+		.form-item-username{
+			margin: 5px;
+			display: flex;
+			padding-bottom: 10px;
+		}
+		.form-item-username input{
+			width: 150px;
+			margin: 0 5px;
+		}
+
+		.form-item{
+			margin: 0 auto;
+			padding-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 91%;
+		}
+		.form-item input{
+			margin: 10px;
+			width: 100%;
+		}
+        .accept-box{
+			display: flex;
+			align-items: center;
+			margin: auto;
+			font-size: 15px;
+        }
+		a{
+			color: black;
+		}
+		a:hover{
+        color:#3a392d
+		}
+		
+		.form-btns{
+			display: flex;
+			flex-direction: column;
+			padding: 10px 0;
+		}
+		.form-btns button{
+			margin: auto;
+			font-size: 20px;
+			padding: 10px;
+			width: 280px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			color: black;
+			background: #FFFDD0;
+
+		}
+		.form-btns button:disabled{
+			cursor: not-allowed;
+			background: #e0dfd0;
+			color:#53534f
+		}
+
+		.form-btns button:hover{
+			background: rgb(12, 212, 212);
+			color: white;
+		}
+		.options{
+			padding-top: 15px;
+			margin: auto;
+			font-size: 13px;
+		}
+		.pwd-format{
+			position: relative;
+			color: black;
+			background: #616053;
+			font-size: 11px;
+			width: 150px;
+			padding: 5px;
+			border-radius: 5px;
+			top: 112px;
+			right: 0px;
+			z-index: 2;
+			display: none;
+		}
+
+		@media screen and (max-width:840px) {
+			.wrapper {
+				width: 80%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<!--Navbar Section-->
+	<nav class="navbar">
+		<div class="navbar__container">
+			<a href="/" id="navbar__logo"><i class="fa-solid fa-cross"></i> Spirit Lead Me</a>
+			<div class="navbar__toggle" id="mobile-menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+			<ul class="navbar__menu">
+				<li class="navbar__item">
+					<a href="/" class="navbar__links"> Home </a>
+				</li>
+				<li class="navbar__item">
+					<a href="/scripture.html" class="navbar__links"> Scripture </a>
+					</li>
+					<li class="navbar__item">
+						<a href="/products.html" class="navbar__links"> Products </a>
+					</li>
+					<li class="navbar__btn">
+						<a href="/signup.html" class="button"> Sign Up </a>
+					</li>
+			</ul>
+		</div>
+	</nav>
+
+<!--Sign Up Page section-->
+ <div class="signup__container">
+	 <h2>Sign Up</h2>
+	 <form action="">
+		 <div class="form-item-username">
+			 <input type="text" name="firstName" id="firstName" placeholder="First Name">
+			 <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+		 </div>
+
+		 <div class="form-item">
+			 <input type="email" name="email" id="email" placeholder="Email Address">
+		</div>
+
+		 <div class="form-item">
+			 <span class="pwd-format">
+				 Min:8 Max:15 Characters 
+			 </span>
+			 <input type="password" name="password" id="password" placeholder="Enter Password">
+			 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+       </div>
+
+		 <div class="accept-box">
+			 <input type="checkbox" name="accept" id="accept">
+			 <p>I accept the <a href="#">Terms & Conditions</a></p>
+		 </div>
+
+		 <div class="form-btns">
+			 <button class="signup" type="submit" >Sign Up</button>
+			 <div class="options">
+				 Already have an account? <a href="#">Login Here</a>
+			 </div>
+		 </div>
+
+	 </form>
+	 
+ </div>
+
+    <!--Footer Section-->
+<div class="footer__container">
+	<div class="footer__links">
+		<div class="footer__link--wrapper">
+			<div class="footer__link--items">
+				<h2>About Us</h2>
+				<a href="/">What is Christianity?</a>
+				<a href="/">Testimonials</a>
+				<a href="/">Find A Church</a>
+				<a href="/">Privacy Policy</a>
+			</div>
+			<div class="footer__link--items">
+				<h2>Contact Us</h2>
+				<a href="/">UK Telephone No.</a>
+				<a href="/">International Telephone No.</a>
+				<a href="/">Email</a>
+				<a href="/">P.O Box</a>
+			</div>
+		</div>
+		<div class="footer__link--wrapper">
+			<div class="footer__link--items">
+				<h2>Media</h2>
+				<a href="/">Live Sermons</a>
+				<a href="/">Photo Gallery</a>
+				<a href="/">Youtube Playlists</a>
+				<a href="/">Short Films</a>
+			</div>
+			<div class="footer__link--items">
+				<h2>Social Media</h2>
+				<a href="/">Facebook</a>
+				<a href="/">Instagram</a>
+				<a href="/">Twitter</a>
+				<a href="/">TikTok</a>
+			</div>
+		</div>
+	</div>
+	<div class="social__media">
+		<div class="social__media--wrap">
+			<div class="footer__logo">
+				<a href="/" id="footer__logo"><i class="fa-solid fa-cross"></i>Spirit Lead Me</a>
+			</div>
+			<p class="website__rights">© Spirit Lead Me 2022. All Rights Reserved</p>
+			<div class="social__icons">
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-facebook"></i>
+				</a>
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="/" class="social__icon--link" 
+				target="_blank">
+					<i class="fab fa-tiktok"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Javascript bit-->
+
+<script src="main.js">
+	
+</script>
+</body>
+</html>
