@@ -83,3 +83,81 @@ header .navbar a{
     margin-left: 2rem;
     color: #fff;
 }
+
+
+#menu{
+    font-size: 3rem;
+    color:#444;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width:1300px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:-100%;
+        background: #2F4F4F;
+        height:calc(100vh - 100%);
+        padding: 2rem;
+        border-top: 1rem solid rgba(0,0,0,0.1);
+        width:50%;
+        /* box-shadow: 0 100vh 0 100vh rgba(0,0,0,0.1); */
+
+    }
+
+    header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin: 1.5em 0;
+        text-align: center;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    header .navbar{
+        width:70%;
+    }
+
+}
