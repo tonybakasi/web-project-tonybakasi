@@ -106,7 +106,9 @@ header .navbar a{
 
 
 
-
+body{
+    height: 300rem;
+}
 
 
 /* Media Queries */
@@ -133,8 +135,12 @@ header .navbar a{
         padding: 2rem;
         border-top: 1rem solid rgba(0,0,0,0.1);
         width:50%;
-        /* box-shadow: 0 100vh 0 100vh rgba(0,0,0,0.1); */
 
+    }
+
+    header .navbar.nav-toggle{
+        left:0%;
+        box-shadow: 0 100vh 0 100vh rgba(0,0,0,0.1);
     }
 
     header .navbar a{
