@@ -382,6 +382,88 @@ header .scroll-bar{
     transform: scale(1.2);
 }
 
+.contact .row{
+    display: flex;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    border:.1rem solid rgba(0,0,0,.2);
+}
+
+.contact .row form{
+    padding: 2rem;
+    flex:1 1 40rem;
+}
+
+.contact .row image{
+    flex:1 1 40rem;
+}
+
+.contact .row .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form .inputBox input{
+    position: relative;
+}
+
+.contact .row form .inputBox input, .contact .row form .inputBox textarea{
+    width: 100%;
+    padding:.5rem 1rem;
+    margin:1.5rem 0;
+    font-size: 1.5rem;
+    color: #444;
+    border: .1rem solid #2F4F4F;
+    text-transform: none;
+    resize: none;
+}
+
+.contact .row form .inputBox label{
+position: absolute;
+top:2.1rem; left:1rem;
+font-size: 1.5rem;
+color:#444;
+}
+
+.contact .row form .inputBox input:invalid,
+.contact .row form .inputBox textarea:invalid{
+    border-color: rgba(0,0,0,0.1);
+}
+
+.contact .row form .inputBox input:valid ~ label,
+.contact .row form .inputBox textarea:valid ~ label,
+.contact .row form .inputBox input:focus ~ label,
+.contact .row form .inputBox textarea:focus ~ label{
+    top: -.6rem; left:0;
+    color: var(--grey);
+    font-size: 1.3rem;
+
+}
+
+.contact .row form .btn:hover{
+    background: var(--grey);
+    cursor: pointer;
+}
+
+.footer{
+    background: #2F4F4F;
+    color: #B2BEB5;
+    font-size: 2rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+
+}
+
+.footer a{
+    color: var(--grey);
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
 /* Media Queries */
 
 @media (max-width:1300px){
@@ -440,6 +522,10 @@ header .scroll-bar{
 
     .home .content .name{
         font-size: 3.5rem;
+    }
+
+    .contact .row .image{
+        display: none;
     }
 
 }
