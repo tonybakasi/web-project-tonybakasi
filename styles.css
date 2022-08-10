@@ -211,11 +211,11 @@ header .scroll-bar{
 }
 
 .about .row .progress-bar .progress:nth-child(3) .bar span{
-    width:40%;
+    width:55%;
 }
 
 .about .row .progress-bar .progress:nth-child(4) .bar span{
-    width:40%;
+    width:5%;
 }
 
 .about .row .personal-info{
@@ -400,6 +400,10 @@ header .scroll-bar{
     text-decoration: underline;
 }
 
+.btn{
+    cursor: pointer;
+}
+
 /* Media Queries */
 
 @media (max-width:1300px){
@@ -420,6 +424,7 @@ header .scroll-bar{
 }
 
 @media (max-width:768px){
+
 
     #menu{
         display: block;
