@@ -127,7 +127,7 @@ header .scroll-bar{
 .home{
     display: flex;
     align-items: center;
-    background:url(../images/portfoliopic-bg.jpg) no-repeat;
+    background:url(../images/portfolio-pic-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -139,12 +139,12 @@ header .scroll-bar{
 
 .home .content .hello{
     font-size: 5rem;
-    color: #fff;
+    color: #2F4F4F;
 }
 
 .home .content .name{
     font-size:5.5rem;
-    color: #fff;
+    color: #2F4F4F;
     font-weight: bolder;
     text-transform: uppercase;
 
@@ -160,7 +160,7 @@ header .scroll-bar{
 .home .content p{
     max-width: 50rem;
     font-size: 1.5rem;
-    color: #fff;
+    color: #000;
     padding-bottom: 1rem;
 }
 
