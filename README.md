@@ -1,5 +1,5 @@
 # web-project-tonybakasi
-This is a template personal portfolio website I have built that I can use for myself in the future. 
+This is a personal portfolio website I have built for my resit for the module CTEC3905. I will be able to use this template for myself in the future. 
 
 Relevant references
 background:url(../images/portfoliopic-bg) no-repeat;
